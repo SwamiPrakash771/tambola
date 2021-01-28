@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		button{
+	 	height: 25px;
+	 	
+	 	position:center;
+	 	border-radius: 5px;
+	 	padding: 5px;
+	 	border: none;
+	 	color: red;
+	 }
+	 button:hover{
+	 	background-color: rgb(3, 148, 252);
+	 	color: white;
+
+	 }
+	 #out{
+	 	font-size: 30px;
+	 	font-family: "Times New Roman";
+	 	text-align: center;
+	 }
+		#inlist{
+			border-width: 2px;
+			font-family: "Times New Roman";
+
+
+		}
+		table,td{
+			border:2px solid black;
+			border-collapse: collapse;
+			font-size: 30px;
+			font-family: "Times New Roman";
+			table-layout: fixed;
+ 			width: 70px;
+ 			height: 30px;
+ 			text-align: center;
+		}
+	</style>
+	<title></title>
+	<script type="text/javascript" src="tamjs2.js">
+		
+		
+		
+	</script>
+</head>
+<body>
+	<div style="text-align: center"><h1>Enter Element : <input type="text" id="inlist" style="width:90px;height: 30px; font-size:20px;font-style:solid ;border-width:  2px;border-style: solid black"      ></h1></div>
+	<br>
+	<div style="text-align: center;"><button id="ghjk"onclick="limyfunc()" style="width:90px; "  >Add</button></div>
+	<br>
+	<div align="center">
+		<table>
+		<tr>
+			<td id="t0"><span id="tab0"></span></td>
+			<td id="t1"><span id="tab1"></span></td>
+			<td id="t2"><span id="tab2"></span></td>
+			<td id="t3"><span id="tab3"></span></td>
+			<td id="t4"><span id="tab4"></span></td>
+			<td id="t5"><span id="tab5"></span></td>
+			<td id="t6"><span id="tab6"></span></td>
+			<td id="t7"><span id="tab7"></span></td>
+			<td id="t8"><span id="tab8"></span></td>
+			
+		</tr>
+		<tr>
+			<td id="t9"><span id="tab9"></span></td>
+			<td id="t10"><span id="tab10"></span></td>
+			<td id="t11"><span id="tab11"></span></td>
+			<td id="t12"><span id="tab12"></span></td>
+			<td id="t13"><span id="tab13"></span></td>
+			<td id="t14"><span id="tab14"></span></td>
+			<td id="t15"><span id="tab15"></span></td>
+			<td id="t16"><span id="tab16"></span></td>
+			<td id="t17"><span id="tab17"></span></td>
+			
+		</tr>
+		<tr>
+			<td id="t18"><span id="tab18"></span></td>
+			<td id="t19"><span id="tab19"></span></td>
+			<td id="t20"><span id="tab20"></span></td>
+			<td id="t21"><span id="tab21"></span></td>
+			<td id="t22"><span id="tab22"></span></td>
+			<td id="t23"><span id="tab23"></span></td>
+			<td id="t24"><span id="tab24"></span></td>
+			<td id="t25"><span id="tab25"></span></td>
+			<td id="t26"><span id="tab26"></span></td>
+			
+		</tr>
+		</table>
+	</div>
+	<br>
+	<div id="out" ></div>
+	<script type="text/javascript">
+		var inpt = document.getElementById("inlist");
+inpt.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+  	event.preventDefault();
+   document.getElementById("ghjk").click();
+   
+  }
+});
+
+	</script>
+
+	
+</body>
+</html>

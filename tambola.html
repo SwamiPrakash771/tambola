@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		table,td{
+			border:2px solid black;
+			border-collapse: collapse;
+			font-size: 30px;
+			font-family: "Times New Roman";
+			table-layout: fixed;
+ 			width: 70px;
+ 			height: 30px;
+ 			text-align: center;
+		}
+		button{
+	 	height: 25px;
+	 	
+	 	position:center;
+	 	border-radius: 5px;
+	 	padding: 5px;
+	 	border: none;
+	 	color: red;
+	 	
+	 }
+	 button:hover{
+	 	background-color: rgb(3, 148, 252);
+	 	color: white;
+
+	 }
+	</style>
+	<title></title>
+
+	<script type="text/javascript">
+		var arr=Array();
+		
+		function ad(){
+			var ab="ind"
+			var a=document.getElementById(ab).value;
+			
+			
+			var q=0;
+			for(var i=0;i<arr.length;i++){
+				if(a!=arr[i] || a==0){
+					q++;
+				}
+			}
+			if(q==arr.length && a<91 && a>=0){
+				arr[arr.length]=a;
+				var uio=arr.length-1;
+				var ab="tab"+uio;
+				
+				document.getElementById(ab).innerHTML=a;
+				
+				
+				
+			}
+			else{
+				
+				alert("Already Exist");
+				
+			}
+			document.getElementById("ind").value="";
+			
+			
+		}
+		function sh(){
+			sessionStorage.setItem('TheArray',JSON.stringify(arr));
+			window.location.href='tambola2.html';
+		}
+
+
+		
+	</script>
+</head>
+<body>
+	<div style="text-align: center"><h1>Enter Element : <input type="text" id="ind" style="width:90px;height: 30px; font-size:20px;font-style:solid ;border-width:  2px;border-style: solid black" ></h1></div>
+	<div style="text-align: center;"><button id="erty"onclick="ad()"  "  >Add</button></div>
+	<br>
+	<div style="text-align: center;"><button id="erty2" onclick="sh()"  "  >Start The Game</button></div>
+	<br>
+	<div align="center">
+		<table>
+		<tr>
+			<td id="t1" ><span id="tab0"></span></td>
+			<td id="t1" ><span id="tab1"></span></td>
+			<td id="t1"><span id="tab2"></span></td>
+			<td id="t1"><span id="tab3"></span></td>
+			<td id="t1"><span id="tab4"></span></td>
+			<td id="t1"><span id="tab5"></span></td>
+			<td id="t1"><span id="tab6"></span></td>
+			<td id="t1"><span id="tab7"></span></td>
+			<td id="t1"><span id="tab8"></span></td>
+			
+		</tr>
+		<tr>
+			<td ><span id="tab9"></span></td>
+			<td ><span id="tab10"></span></td>
+			<td ><span id="tab11"></span></td>
+			<td ><span id="tab12"></span></td>
+			<td ><span id="tab13"></span></td>
+			<td ><span id="tab14"></span></td>
+			<td ><span id="tab15"></span></td>
+			<td ><span id="tab16"></span></td>
+			<td ><span id="tab17"></span></td>
+			
+		</tr>
+		<tr>
+			<td ><span id="tab18"></span></td>
+			<td ><span id="tab19"></span></td>
+			<td ><span id="tab20"></span></td>
+			<td ><span id="tab21"></span></td>
+			<td ><span id="tab22"></span></td>
+			<td ><span id="tab23"></span></td>
+			<td ><span id="tab24"></span></td>
+			<td ><span id="tab25"></span></td>
+			<td ><span id="tab26"></span></td>
+			
+		</tr>
+		</table>
+	</div>
+	<br><div style="text-align: center"><h1>Enter <span style="color: red">0</span> if box is empty</h1></div>
+	<script type="text/javascript">
+		var inpt = document.getElementById("ind");
+inpt.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+  	event.preventDefault();
+   document.getElementById("erty").click();
+   
+  }
+});
+</script>
+
+</body>
+</html>
